@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | WEB-Church</title>
+    <title>Unity WebGL Player | WEBGL SCREENSHOT</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -20,7 +20,7 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">WEB-Church</div>
+        <div id="unity-build-title">WEBGL SCREENSHOT</div>
       </div>
     </div>
     <script>
@@ -56,14 +56,14 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/fd97f8b8879ecf85b0244f6888a1cdbf.js";
+      var loaderUrl = buildUrl + "/2222.loader.js";
       var config = {
-        dataUrl: buildUrl + "/c4f75b1209c6b0beb37bcd1417c96b90.data",
-        frameworkUrl: buildUrl + "/7f5af27f1d47e06a44fdbc0625c7c801.js",
-        codeUrl: buildUrl + "/2f9c47b55d373aca8451a6b28a67acb6.wasm",
+        dataUrl: buildUrl + "/2222.data.gz",
+        frameworkUrl: buildUrl + "/2222.framework.js.gz",
+        codeUrl: buildUrl + "/2222.wasm.gz",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "Room505",
-        productName: "WEB-Church",
+        companyName: "DefaultCompany",
+        productName: "WEBGL SCREENSHOT",
         productVersion: "0.1",
         showBanner: unityShowBanner,
       };
@@ -91,7 +91,7 @@
         canvas.style.width = window.innerWidth + 'px';
         canvas.style.height = window.innerHeight + 'px';
 
-        // unityShowBanner('WebGL builds are not supported on mobile devices.');
+        unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
