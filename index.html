@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600></canvas>
+      <canvas id="unity-canvas" width=1280 height=720></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -58,9 +58,9 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/fd97f8b8879ecf85b0244f6888a1cdbf.js";
       var config = {
-        dataUrl: buildUrl + "/18d9b72545ae17ab03fc31c5a20152b4.data",
+        dataUrl: buildUrl + "/45b9a354e8bb4cde71deaf4d58eaf15c.data",
         frameworkUrl: buildUrl + "/79781bf4cb6456d68aa88f2663d59714.js",
-        codeUrl: buildUrl + "/5823c814f481501bd1969e73d70e7c38.wasm",
+        codeUrl: buildUrl + "/73c4b4a6ebeac441a7a9ad006821582a.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Room505",
         productName: "WEB-Church",
@@ -95,8 +95,8 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "1280px";
+        canvas.style.height = "720px";
       }
 
       loadingBar.style.display = "block";
