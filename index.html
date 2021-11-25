@@ -17,13 +17,18 @@
         </div>
       </div>
       <div id="unity-warning"> </div>
+      <div id="unity-footer">
+       
+        
+        
+      </div>
     </div>
     <script>
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
-      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      
       var warningBanner = document.querySelector("#unity-warning");
 
       // Shows a temporary message banner/ribbon for a few seconds, or
@@ -53,7 +58,7 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/fd97f8b8879ecf85b0244f6888a1cdbf.js";
       var config = {
-        dataUrl: buildUrl + "/6bf4779930efc7dda0388c134af51c81.data",
+        dataUrl: buildUrl + "/04e34170e48d68eaea10252d9ea2c3c7.data",
         frameworkUrl: buildUrl + "/68ad550f6f7272fde5783460bce9437c.js",
         codeUrl: buildUrl + "/5d9a690c6e9f669802b6d991688f302a.wasm",
         streamingAssetsUrl: "StreamingAssets",
@@ -61,7 +66,7 @@
         productName: "Каргопольский музей",
         productVersion: "0.1",
         showBanner: unityShowBanner,
-      };
+      
 
       // By default Unity keeps WebGL canvas render target size matched with
       // the DOM size of the canvas element (scaled by window.devicePixelRatio)
@@ -90,26 +95,11 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-		canvas.style.width = (window.innerWidth-5) + 'px';
-        canvas.style.height = (window.innerHeight-5) + 'px';
-        //canvas.style.width = "1280px";
-        //canvas.style.height = "720px";
+        
+        canvas.style.width = (window.innerWidth-5) + 'px';canvas.style.height = (window.innerHeight-5) + 'px';
       }
 
       loadingBar.style.display = "block";
-	
-	// Simulate click function
-        function clickButton() {
-            click_event = new MouseEvent("click");
-           // btn_element = document.querySelector("#unity-fullscreen-button");
-            fullscreenButton.dispatchEvent(click_event);
-        }
-		
-		function triggerMouseEvent (node, eventType) {
-			var clickEvent = document.createEvent ('MouseEvents');
-			clickEvent.initEvent (eventType, true, true);
-			node.dispatchEvent (clickEvent);
-		}
 
       var script = document.createElement("script");
       script.src = loaderUrl;
@@ -117,22 +107,15 @@
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
-		  
           loadingBar.style.display = "none";
           
-		   
-		//   setTimeout(clickButton(), 3000);
-		   
-		  // clickButton();
-		   // script.unityInstance.SetFullscreen(1);
-		 //  var ttargetnode = document.querySelector('#unity-fullscreen-button');
-		  // triggerMouseEvent(ttargetnode, "mousedown");
+            
+          
         }).catch((message) => {
           alert(message);
         });
-      };
+      
       document.body.appendChild(script);
-	
     </script>
   </body>
 </html>
