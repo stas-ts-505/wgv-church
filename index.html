@@ -96,10 +96,10 @@
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
 
-        canvas.style.width = window.innerWidth + 'px';
-        canvas.style.height = window.innerHeight + 'px';
-       // canvas.style.width = "1280px";
-       // canvas.style.height = "720px";
+       // canvas.style.width = window.innerWidth + 'px';
+      //  canvas.style.height = window.innerHeight + 'px';
+        canvas.style.width = "1280px";
+        canvas.style.height = "720px";
       }
 
       loadingBar.style.display = "block";	
@@ -114,7 +114,7 @@
           fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
           };
-		   unityInstance.SetFullscreen(1);
+		   //unityInstance.SetFullscreen(1);
         }).catch((message) => {
           alert(message);
         });
