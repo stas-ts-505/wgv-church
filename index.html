@@ -103,9 +103,9 @@
 	
 	// Simulate click function
         function clickButton() {
-            click_event = new CustomEvent('click');
-            btn_element = document.querySelector('#unity-fullscreen-button');
-            btn_element.dispatchEvent(click_event);
+            click_event = new MouseEvent("click");
+           // btn_element = document.querySelector("#unity-fullscreen-button");
+            fullscreenButton.dispatchEvent(click_event);
         }
 		
 		function triggerMouseEvent (node, eventType) {
@@ -126,7 +126,9 @@
             unityInstance.SetFullscreen(1);
           };
 		   
-		   clickButton();
+		   setTimeout(clickButton(), 3000);
+		   
+		  // clickButton();
 		   // script.unityInstance.SetFullscreen(1);
 		 //  var ttargetnode = document.querySelector('#unity-fullscreen-button');
 		  // triggerMouseEvent(ttargetnode, "mousedown");
