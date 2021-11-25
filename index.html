@@ -126,15 +126,16 @@
             unityInstance.SetFullscreen(1);
           };
 		   
+		   clickButton();
 		   // script.unityInstance.SetFullscreen(1);
-		   var ttargetnode = document.querySelector('#unity-fullscreen-button');
-		   triggerMouseEvent(ttargetnode, "mousedown");
+		 //  var ttargetnode = document.querySelector('#unity-fullscreen-button');
+		  // triggerMouseEvent(ttargetnode, "mousedown");
         }).catch((message) => {
           alert(message);
         });
       };
       document.body.appendChild(script);
-	  alert("end doc");
+	
     </script>
   </body>
 </html>
