@@ -58,7 +58,7 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/fd97f8b8879ecf85b0244f6888a1cdbf.js";
       var config = {
-        dataUrl: buildUrl + "/04e34170e48d68eaea10252d9ea2c3c7.data",
+        dataUrl: buildUrl + "/8a5718542f2db1fd317394782f6eef01.data",
         frameworkUrl: buildUrl + "/68ad550f6f7272fde5783460bce9437c.js",
         codeUrl: buildUrl + "/5d9a690c6e9f669802b6d991688f302a.wasm",
         streamingAssetsUrl: "StreamingAssets",
@@ -66,7 +66,7 @@
         productName: "Каргопольский музей",
         productVersion: "0.1",
         showBanner: unityShowBanner,
-      
+      };
 
       // By default Unity keeps WebGL canvas render target size matched with
       // the DOM size of the canvas element (scaled by window.devicePixelRatio)
@@ -110,11 +110,10 @@
           loadingBar.style.display = "none";
           
             
-          
         }).catch((message) => {
           alert(message);
         });
-      
+      };
       document.body.appendChild(script);
     </script>
   </body>
