@@ -107,6 +107,12 @@
             btn_element = document.querySelector('#unity-fullscreen-button');
             btn_element.dispatchEvent(click_event);
         }
+		
+		function triggerMouseEvent (node, eventType) {
+			var clickEvent = document.createEvent ('MouseEvents');
+			clickEvent.initEvent (eventType, true, true);
+			node.dispatchEvent (clickEvent);
+		}
 
       var script = document.createElement("script");
       script.src = loaderUrl;
@@ -121,7 +127,8 @@
           };
 		   
 		   // script.unityInstance.SetFullscreen(1);
-		   clickButton();
+		   var ttargetnode = document.querySelector('#unity-fullscreen-button');
+		   triggerMouseEvent(ttargetnode, "mousedown");
         }).catch((message) => {
           alert(message);
         });
